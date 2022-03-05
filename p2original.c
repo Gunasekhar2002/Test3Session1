@@ -1,49 +1,45 @@
 #include<stdio.h>
 struct _fraction
 {
-float num,den;
+int num,den;
 };
 typedef struct  _fraction Fraction;
 Fraction input_fraction()
 {
-  Fraction f1,f2,f3;
-  printf("Enter the numerator and denomenator for fraction 1:");
-  scanf("%f %f",&f1.num,&f1.den);
-   printf("Enter the numerator and denomenator for fraction 2:");
-  scanf("%f %f",&f2.num,&f2.den);
-   printf("Enter the numerator and denomenator for fraction 3:");
-  scanf("%f %f",&f3.num,&f3.den);
-  return f1;
-  return f2;
-  return f3;
+  Fraction f;
+  printf("Enter the numerator and denomenator for fraction :");
+  scanf("%d %d",&f.num,&f.den);
+   
+  return f;
+ 
 }
 Fraction smallest_fraction(Fraction f1, Fraction f2, Fraction f3)
 {
-  int num,den;
-  float smallest;
+  int num,den,res1,res2,res3;
+  Fraction smallest;
+ int cmndiv=f1.den*f2.den*f3.den;
+  res1=f1.num*cmndiv/f1.den;
+  res2=f2.num*cmndiv/f2.den;
+  res3=f3.num*cmndiv/f3.den;
   
-  float  res1,res2,res3;
-  res1=(f1.num)/(f1.den);
-  res2=(f2.num)/(f2.den);
-  res3=(f3.num)/(f3.den);
   if (res1<res2 && res1<res3){
-    smallest=res1;
-    return 
+    return f1;
+    
     
   }
   else if(res2<res1 && res2<res3){
-    smallest=res2;
+    return f2;
     
   }
   else
   {
-    smallest=res3;
+    return f3;
   }
 }
-void output(Fraction  f1, Fraction f2, Fraction f3, float smallest)
+void output(Fraction  f1, Fraction f2, Fraction f3, Fraction smallest)
   {
-    printf("the smallest fraction among three given fraction is %f",smallest);
-  }
+    if (smallest==)
+    }
     
   
   
@@ -55,7 +51,9 @@ int main()
 {
   Fraction f1,f2,f3;
   float small;
-  input_fraction();
+  f1=input_fraction();
+  f2=input_fraction();
+  f3=input_fraction();
   smallest_fraction(f1,f2,f3);
 output(f1,f2,f3,small);
   
