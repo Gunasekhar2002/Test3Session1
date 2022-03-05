@@ -20,7 +20,7 @@ Fraction input_fraction()
 Fraction smallest_fraction(Fraction f1, Fraction f2, Fraction f3)
 {
   int num,den;
-  int smallest;
+  float smallest;
   
   float  res1,res2,res3;
   res1=(f1.num)/(f1.den);
@@ -28,6 +28,7 @@ Fraction smallest_fraction(Fraction f1, Fraction f2, Fraction f3)
   res3=(f3.num)/(f3.den);
   if (res1<res2 && res1<res3){
     smallest=res1;
+    return 
     
   }
   else if(res2<res1 && res2<res3){
